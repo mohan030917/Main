@@ -15,5 +15,5 @@ jobs:
           sh -c 'chmod +x ~/.local/bin/playwright'
       - name: Install Playwright dependencies
         run: npm install playwright chromium
-         - run: npm test
+        run: npm test
 
