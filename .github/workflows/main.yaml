@@ -16,10 +16,14 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '20' 
+          node-version: '20.17.0'
 
       - name: Install dependencies
         run: npm install
+
+      - name: Grant execution permissions
+        run: |
+          chmod +x node_modules/.bin/cucumber-js  # Grant execution permissions to cucumber-js
 
       - name: Run tests
         run: npm test
