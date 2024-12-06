@@ -1,0 +1,60 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "bookmyshow-login-functionality;successful-login",
+        "keyword": "Scenario",
+        "line": 4,
+        "name": "Successful Login",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 4842817299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "I am on the BookMyShow login page",
+            "match": {
+              "location": "steps\\login.steps.ts:5"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 992799,
+              "error_message": "TypeError: Cannot read properties of undefined (reading 'waitForTimeout')\n    at D:\\Moah123\\steps\\login.steps.ts:7:16\n    at D:\\Moah123\\steps\\login.steps.ts:8:71\n    at __awaiter (D:\\Moah123\\steps\\login.steps.ts:4:12)\n    at World.<anonymous> (D:\\Moah123\\steps\\login.steps.ts:5:54)"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "failed",
+              "duration": 455900,
+              "error_message": "TypeError: Cannot read properties of undefined (reading 'screenshot')\n    at World.<anonymous> (D:\\Moah123\\steps\\world.ts:36:24)\n    at D:\\Moah123\\steps\\world.ts:8:71\n    at __awaiter (D:\\Moah123\\steps\\world.ts:4:12)\n    at World.<anonymous> (D:\\Moah123\\steps\\world.ts:34:12)"
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@demo",
+            "line": 3
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "bookmyshow-login-functionality",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "BookMyShow Login Functionality",
+    "tags": [],
+    "uri": "features\\demo.feature"
+  }
+]

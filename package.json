@@ -1,0 +1,18 @@
+{
+  "name": "moah123",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cucumber-js -p test_runner --tags @demo"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@cucumber/cucumber": "^11.1.0",
+    "@playwright/test": "^1.49.0",
+    "playwright": "^1.49.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.2"
+  }
+}
