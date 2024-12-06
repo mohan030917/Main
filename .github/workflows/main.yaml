@@ -13,8 +13,8 @@ jobs:
       - name: Install Dependencies
         run: npm install
       - name: Install Playwright dependencies
-        run: npm playwright install
-      - name: Grant Execution Permissions
-        run: chmod +x node_modules/.bin/cucumber-js
+        run: npm i @playwright/test
+      - name: Install cucumber dependencies
+        run: npm i @cucumber/cucumber
       - name: Run Tests
         run: npm run test
