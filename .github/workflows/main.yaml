@@ -10,9 +10,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - name: Fix playwright permissions and install dependencies
-        run: |
-          chmod +x ~/.local/bin/playwright
-          npm install playwright chromium
+      - name: Install Playwright dependencies
+        run: npm install playwright chromium
       - name: Run tests
         run: npm test
