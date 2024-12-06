@@ -13,7 +13,7 @@ Before( async () => {
 
   // Launch a browser (e.g., Chromium)
   const browser = await chromium.launch({
-    headless: false, // Set to true for headless mode
+    headless: true, // Set to true for headless mode
     slowMo: 500, // Slow down execution for debugging
   });
 
