@@ -10,11 +10,24 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '20.17.0'
+
       - name: Install Dependencies
         run: npm install
-      - name: Install Playwright dependencies
-        run: npm i @playwright/test
-      - name: Install cucumber dependencies
-        run: npm i @cucumber/cucumber
+
+      - name: Install Playwright browsers and dependencies
+        run: |
+          npx playwright install chromium
+          npx playwright install-deps
+
+      - name: Grant execution permissions
+        run: |
+          chmod +x node_modules/.bin/cucumber-js
+          chmod +x node_modules/.bin/playwright
+
       - name: Run Tests
         run: npm run test
