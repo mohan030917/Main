@@ -4,32 +4,16 @@ on:
   push:
     branches:
       - main
-
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: '20.17.0'
-
-      - name: Install dependencies
-        run: npm install
-
-      - name: Grant execution permissions
+      - uses: actions/checkout@v3
+      - name: Fix playwright permissions
         run: |
-          chmod +x node_modules/.bin/cucumber-js
-
-      - name: Install Playwright browsers
-        run: npx playwright install chromium
-
+          sh -c 'chmod +x ~/.local/bin/playwright'
       - name: Install Playwright dependencies
-        run: npx playwright install-deps
+        run: npm install playwright chromium
+         - run: npm test
 
-      - name: Run tests
-        run: npm test
