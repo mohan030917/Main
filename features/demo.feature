@@ -1,6 +1,6 @@
 Feature: BookMyShow Login Functionality
 
- @demo
+ @demo1
   Scenario: Successful Login
     Given I am on the BookMyShow login page
     # When I enter a valid username

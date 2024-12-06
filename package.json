@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "npx cucumber-js -p test_runner --tags @demo"
+    "test": "npx cucumber-js -p test_runner --tags @demo1"
   },
   "author": "",
   "license": "ISC",
