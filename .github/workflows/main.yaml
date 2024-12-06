@@ -21,15 +21,16 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Install Playwright browsers
-        run: |
-          npx playwright install chromium
-          npx playwright install-deps  # This installs necessary dependencies for Linux
-
       - name: Grant execution permissions
         run: |
           chmod +x node_modules/.bin/cucumber-js
           chmod +x node_modules/.bin/playwright
+
+      - name: Install Playwright browsers
+        run: ./node_modules/.bin/npx playwright install chromium
+        
+      - name: Install Playwright dependencies
+        run: ./node_modules/.bin/npx playwright install-deps
 
       - name: Run tests
         run: npm test
