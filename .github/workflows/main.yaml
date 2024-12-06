@@ -17,4 +17,4 @@ jobs:
       - name: Grant Execution Permissions
         run: chmod +x node_modules/.bin/cucumber-js
       - name: Run Tests
-        run: npx cucumber-js -p test_runner --tags @demo1
+        run: npm run test
