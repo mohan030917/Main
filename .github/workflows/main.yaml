@@ -2,18 +2,17 @@ name: CI
 
 on:
   push:
-    branches:
-      - main
+    branches: [main]
+
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v3
-      - name: Fix playwright permissions
+      - name: Fix playwright permissions and install dependencies
         run: |
-          sh -c 'chmod +x ~/.local/bin/playwright'
-      - name: Install Playwright dependencies
-        run: npm install playwright chromium
+          chmod +x ~/.local/bin/playwright
+          npm install playwright chromium
+      - name: Run tests
         run: npm test
-
