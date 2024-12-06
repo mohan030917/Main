@@ -9,27 +9,18 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: '20.17.0'
-
-      - name: Install Dependencies
-        run: npm install
-
-      - name: Install Playwright dependencies
-        run: npm install playwright cucumber
-       
-      # - name: Install cucumber dependencies 
-      #   run: npm i @cucumber/cucumber
-
-      # - name: Install Playwright dependencies
-      #   run: npx playwright install   
-
-      - name: Grant execution permissions
-        run: chmod +x node_modules/.bin/cucumber-js
-
-      - name: Run Tests
-        run: npm run test
+    - uses: actions/checkout@v4
+    - uses: actions/setup-node@v4
+      with:
+        node-version: lts/*
+    - name: Install dependencies
+      run: npm ci
+    - name: Install Playwright Browsers
+      run: npx playwright install --with-deps
+    - name: Run Playwright tests
+      run: npm run test
+    - uses: actions/upload-artifact@v4
+      if: ${{ !cancelled() }}
+      with:
+        name: playwright-report
+        path: playwright-report/
