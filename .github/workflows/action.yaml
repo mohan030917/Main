@@ -35,3 +35,4 @@ jobs:
           to: 'mohan030917@gmail.com'
           subject: 'Build Successful: Cucumber Report Attached'
           body: 'Your build has been successful. Please find the Cucumber report attached file:///D:/Play07DEC/Reports/cucumber_report.html'
+          attachments: cucumber-report/
