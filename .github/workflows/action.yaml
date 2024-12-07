@@ -20,15 +20,15 @@ jobs:
       - name: Run Playwright tests
         run: npm run test
       - uses: actions/upload-artifact@v4
-        if: ${{ !cancelled() }}
+        if: ${{ always() }}
         with:
           name: cucumber-report
-          path: cucumber-report/
+          path: Reports/cucumber_report.html
       - name: Send Email
         uses: dawidd6/action-send-mail@v4
         with:
           server_address: 'smtp.gmail.com'
-          server_port: 587
+          server_port: 465
           username: 'mohan030917@gmail.com'
           password: 'Mohan@123'
           from: 'mohan030917@gmail.com'
