@@ -21,10 +21,10 @@ jobs:
         run: npm run test
       - name: Upload Cucumber Report
         uses: actions/upload-artifact@v4
-        if: ${{ !cancelled() }}
+        if: ${{always()}}
         with:
           name: cucumber-report
-          path: cucumber-report/
+          path: \Reports\cucumber_report.html
       - name: Send Email
         uses: dawidd6/action-send-mail@v4
         with:
@@ -36,4 +36,4 @@ jobs:
           to: 'mohan030917@gmail.com'
           subject: 'Build Successful: Cucumber Report Attached'
           body: 'Your build has been successful. Please find the Cucumber report attached.'
-          attachments: cucumber-report/
+          attachments: \Reports\cucumber_report.html
