@@ -24,3 +24,14 @@ jobs:
       with:
         name: playwright-report
         path: playwright-report/
+
+    - name: Send Email
+      uses: actions/send-mail@v2
+      with:
+          server_url: 'smtp.gmail.com'
+          port: 587
+          from: 'your_email@gmail.com'
+          to: 'mohan030917@example.com'
+          subject: 'Build Successful'
+          body: 'Your build has been successful. Here are the details:'
+        
