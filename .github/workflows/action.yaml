@@ -24,7 +24,7 @@ jobs:
         if: ${{always()}}
         with:
           name: cucumber-report
-          path: \Reports\cucumber_report.html
+          path: Reports/cucumber_report.html
       - name: Send Email
         uses: dawidd6/action-send-mail@v4
         with:
@@ -36,4 +36,4 @@ jobs:
           to: 'mohan030917@gmail.com'
           subject: 'Build Successful: Cucumber Report Attached'
           body: 'Your build has been successful. Please find the Cucumber report attached.'
-          attachments: \Reports\cucumber_report.html
+          attachments: Reports/cucumber_report.html
