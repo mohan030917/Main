@@ -19,20 +19,21 @@ jobs:
         run: npx playwright install --with-deps
       - name: Run Playwright tests
         run: npm run test
-      - uses: actions/upload-artifact@v4
-        if: ${{ always() }}
+      - name: Upload Cucumber Report
+        uses: actions/upload-artifact@v4
+        if: ${{ !cancelled() }}
         with:
           name: cucumber-report
-          path: Reports/cucumber_report.html
+          path: cucumber-report/
       - name: Send Email
         uses: dawidd6/action-send-mail@v4
         with:
           server_address: 'smtp.gmail.com'
-          server_port: 465
+          server_port: 587
           username: ${{ secrets.SMTP_USERNAME }}
           password: ${{ secrets.SMTP_PASSWORD }}
-          from: 'mohan030917@gmail.com'
-          to: 'mohan030917@gmail.com'
+          from: ${{ secrets.SMTP_USERNAME }}
+          to: 'mohan030917@example.com'
           subject: 'Build Successful: Cucumber Report Attached'
-          body: 'Your build has been successful. Please find the Cucumber report attached file:///D:/Play07DEC/Reports/cucumber_report.html'
+          body: 'Your build has been successful. Please find the Cucumber report attached.'
           attachments: cucumber-report/
