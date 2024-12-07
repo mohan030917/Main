@@ -27,8 +27,8 @@ jobs:
       - name: Send Email
         uses: dawidd6/action-send-mail@v4
         with:
-          server_url: 'smtp.gmail.com'
-          port: 587
+          server_address: 'smtp.gmail.com'
+          server_port: 587
           username: 'mohan030917@gmail.com'
           password: 'Mohan@123'
           from: 'mohan030917@gmail.com'
