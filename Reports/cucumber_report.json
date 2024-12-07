@@ -1,0 +1,58 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "bookmyshow-login-functionality;successful-login",
+        "keyword": "Scenario",
+        "line": 4,
+        "name": "Successful Login",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 4344181099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "I am on the Product Store page",
+            "match": {
+              "location": "steps\\login.steps.ts:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7839830199
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 735526400
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@demo1",
+            "line": 3
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "bookmyshow-login-functionality",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "BookMyShow Login Functionality",
+    "tags": [],
+    "uri": "features\\test.feature"
+  }
+]
