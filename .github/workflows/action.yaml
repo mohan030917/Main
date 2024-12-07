@@ -33,7 +33,7 @@ jobs:
           username: ${{ secrets.SMTP_USERNAME }}
           password: ${{ secrets.SMTP_PASSWORD }}
           from: ${{ secrets.SMTP_USERNAME }}
-          to: 'mohan030917@example.com'
+          to: 'mohan030917@gmail.com'
           subject: 'Build Successful: Cucumber Report Attached'
           body: 'Your build has been successful. Please find the Cucumber report attached.'
           attachments: cucumber-report/
