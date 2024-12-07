@@ -30,7 +30,7 @@ jobs:
           server_address: 'smtp.gmail.com'
           server_port: 465
           username: ${{ secrets.SMTP_USERNAME }}
-          password: ${{ secrets.SMTP_USERNAME }}
+          password: ${{ secrets.SMTP_PASSWORD }}
           from: 'mohan030917@gmail.com'
           to: 'mohan030917@gmail.com'
           subject: 'Build Successful: Cucumber Report Attached'
