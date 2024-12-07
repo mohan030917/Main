@@ -25,11 +25,13 @@ jobs:
           name: cucumber-report
           path: cucumber-report/
       - name: Send Email
-        uses: actions/send-mail@v2
+        uses: dawidd6/action-send-mail@v4
         with:
-          server_url: 'https://github.com/mohan030917/Main/edit/Bookmyshow/.github/workflows/action.yaml'
+          server_url: 'smtp.gmail.com'
           port: 587
-          from: 'your_email@gmail.com'
+          username: 'mohan030917@gmail.com'
+          password: 'Mohan@123'
+          from: 'mohan030917@gmail.com'
           to: 'mohan030917@example.com'
           subject: 'Build Successful: Cucumber Report Attached'
           body: 'Your build has been successful. Please find the Cucumber report attached.'
