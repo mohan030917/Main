@@ -29,7 +29,7 @@ jobs:
         with:
           server_url: 'https://github.com/mohan030917/Main/edit/Bookmyshow/.github/workflows/action.yaml'
           port: 587
-          from: 'mohan030917@gmail.com'
-          to: 'mohan030917@gmail.com'
+          from: 'your_email@gmail.com'
+          to: 'mohan030917@example.com'
           subject: 'Build Successful: Cucumber Report Attached'
           body: 'Your build has been successful. Please find the Cucumber report attached.'
